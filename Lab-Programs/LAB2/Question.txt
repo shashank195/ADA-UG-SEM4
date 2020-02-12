@@ -1,0 +1,4 @@
+Write a program to implement
+a) Bubble Sort
+b) Selection Sort
+Note: Two functions should be implemented in a single program, functions should be called based on input provided in switch case.
