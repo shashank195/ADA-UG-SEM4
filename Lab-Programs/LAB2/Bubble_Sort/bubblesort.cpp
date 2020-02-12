@@ -1,41 +1,57 @@
-#include <bits/stdc++.h> 
-using namespace std; 
-  
-void swap(int *xp, int *yp)  
-{  
-    int temp = *xp;  
-    *xp = *yp;  
-    *yp = temp;  
-}  
-  
+#include<iostream>
+#include<time.h>
+//#include<chrono>
+//#include<algorithm>
+using namespace std;
+//using namespace std::chrono;
 
-void bubbleSort(int arr[], int n)  
-{  
-    int i, j;  
-    for (i = 0; i < n-1; i++)      
-      
-   
-    for (j = 0; j < n-i-1; j++)  
-        if (arr[j] > arr[j+1])  
-            swap(&arr[j], &arr[j+1]);  
-}  
-  
+void bub(int *,int );
 
-void printArray(int arr[], int size)  
-{  
-    int i;  
-    for (i = 0; i < size; i++)  
-        cout << arr[i] << " ";  
-    cout << endl;  
-}  
-  
+int main()
+{
+	clock_t start,end;
+	int n,i=-1;
+	cout<<"Enter size:";
+	cin>>n;
+	int arr[n];
+	cout<<"\nEnter the array :";
+	while(i<n-1)
+	{
+		i++;
+		cin>>arr[i];
+	}
+	//n = sizeof(arr)/sizeof(n);
+	//auto start = high_resolution_clock::now();
+	start = clock();
+	bub(&arr[0],n);
+	
+	//auto stop = high_resolution_clock::now();
+	
+	for(int i=0;i<n;i++)
+		cout<<arr[i]<<"\t\t";
+		
+	end = clock();
+	double cpu_time_used = 1000000*((double)(end - start))/CLOCKS_PER_SEC;
+	cout<<"\n TIME USED(milli):"<<cpu_time_used<<"\n";
+	//auto duration = duration_cast<milliseconds>(stop-start);
+	//cout<<"Time taken by function: "<<duration.count()<<" nanoseconds"<<endl;
+	return 0;
+}
 
-int main()  
-{  
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};  
-    int n = sizeof(arr)/sizeof(arr[0]);  
-    bubbleSort(arr, n);  
-    cout<<"Sorted array: \n";  
-    printArray(arr, n);  
-    return 0;  
-}  
+void bub(int *arr,int n)
+{	
+	int temp;
+	for(int i=0; i<n; i++)
+	{
+		for(int j=i+1; j<n; j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;	
+			}
+		}
+		
+	}
+}
