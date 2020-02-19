@@ -1,3 +1,4 @@
+ 
 #include<stdio.h>
 #include<time.h>
 
@@ -8,7 +9,7 @@ void swap(int *x, int *y)
     *y = temp; 
 } 
 
-void selectionsort()
+void modified_selection_sort()
 {
 	int arr[100],i,j,n,max,k;
 	printf("Enter no. of elements");
@@ -20,7 +21,7 @@ void selectionsort()
 	{
 		scanf("%d",&arr[i]);
 	}
-	for(i=0 ; i < n-1 ; i++)
+	for(i=0 ; i < k ; i++)
 	{
 		max = i;
 		for(j = i+1 ; j < n ; j++)
@@ -47,7 +48,7 @@ int main()
 {
 	clock_t start,end; 
     start = clock(); 
-    selectionsort(); 
+    modified_selection_sort(); 
     end = clock(); 
     double time_taken = ((double)(end - start))/CLOCKS_PER_SEC; 
   
