@@ -6,5 +6,4 @@ if __name__=='__main__':
     arr = [12, 3, 5, 7, 19] 
     n = len(arr) 
     k = 2
-    print("K'th largest element is", 
-          kthLargest(arr, n, k)) 
+    print("K'th largest element is", kthLargest(arr, n, k)) 
