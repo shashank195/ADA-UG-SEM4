@@ -39,3 +39,17 @@ int main(){
                  bfs(q[f++]); 
                  }  
          }
+
+
+/* output
+Enter the no. of vertices
+4
+Enter the adjacency matrix
+0 1 1 0
+0 0 0 1
+0 1 0 0
+0 0 0 0
+Enter the start vertex
+0
+ALl the nodes reachable from 0 are 
+1 2 3 
