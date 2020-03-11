@@ -34,3 +34,22 @@ void dfs(int v){
     getch();
     return(0);
   }
+
+/*output:
+Enter no of vertices:                                                                                                         
+6                                                                                                                             
+Enter adjacency matrix                                                                                                        
+0 1 1 1 0 0                                                                                                                   
+1 0 0 0 0 0                                                                                                                   
+1 0 0 1 1 0   
+1 0 1 0 0 0                                                                                                                   
+0 0 1 0 0 0                                                                                                                   
+0 0 0 0 0 0    
+connectivity of the graph are 
+1 -> 2                                                                                                                        
+1 -> 3  
+1 -> 4
+3 -> 4 
+3 -> 5                                                                                                                        
+Graph is disconnected    
+*/
